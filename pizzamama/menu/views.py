@@ -6,6 +6,6 @@ from .models import Pizza
 
 def index(request):
     pizzas = Pizza.objects.all()
-    pizzas_noms = [pizza.nom for pizza in pizzas]
-    pizzas_noms_str = ", ".join(pizzas_noms)
-    return HttpResponse("Les pizzas : " + pizzas_noms_str)
+    pizzas_noms_et_prix = [pizza.nom + " : " + str(pizza.prix) + "$" for pizza in pizzas]
+    pizzas_noms_et_prix_str = ", ".join(pizzas_noms_et_prix)
+    return HttpResponse("Les pizzas : " + pizzas_noms_et_prix_str)
