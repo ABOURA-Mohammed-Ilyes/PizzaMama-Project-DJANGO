@@ -1,2 +1,5 @@
 # Ignore the virtual environment directory
 venv/
+
+#ignore vscode launch configuration
+.vscode
